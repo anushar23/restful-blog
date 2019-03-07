@@ -1,0 +1,41 @@
+
+<%include ./partials/header%>
+
+<div class="ui text container main ">
+    <div class="ui huge header"><%= blog.title %></div>
+      <div class="ui top attached black raised segment">
+        
+          <div class="item">
+            <img class="ui centered rounded image" src="<%= blog.image %>">
+            
+            
+        <div class="content">
+    
+        <div id="createdDate"><%= blog.created.toDateString() %></div>
+        </div>
+        
+        <div id="desc" class="description">
+        <p><%- blog.body %> </p> 
+        <!--using - it will evaluate the code ,instead of =, means it will render html content also-->
+        </div>
+        
+        <p><a href="/blogs/<%=blog._id%>/comments/new" class="ui button">Add New Comment</a></p>
+        
+        <% blog.comments.forEach(function(each){%>
+       <p> <%=each.author%> - <%=each.text%></p>
+          
+        <% })%>
+        
+        <div id="editDelete">
+        <a href="/blogs/<%=blog._id%>/edit" class="ui positive button">Edit Blog</a>
+        <form id="delete" class="ui form" method="post" action="/blogs/<%=blog._id%>?_method=DELETE" onsubmit="return confirm('Are You Sure You Want To Delete?');">
+          <button  class="ui negative button">Delete Blog</button>
+        </form>
+        </div>
+        
+    </div>
+</div>
+    
+</div>
+
+<%include ./partials/footer%>

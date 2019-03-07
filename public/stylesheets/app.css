@@ -1,0 +1,41 @@
+#delete{
+    display:inline-block;
+}
+
+
+i.icon{
+    
+    font-size: 2em;
+}
+
+.container.main {
+    margin-top: 7%;
+    margin-bottom: 5%; 
+}
+
+#createdDate{
+    padding-top:20px;
+}
+
+#editDelete{
+    padding-top:30px;
+}
+
+#desc{
+    padding-top:10px;
+}
+
+#cont{
+        min-height: 100%;
+overflow: hidden;
+    margin-top: 5%;
+     padding-bottom: 5%; 
+ 
+}
+
+#cont2{
+     /*min-height: 100%;*/
+/*overflow: hidden;*/
+    /*margin-top: 5%;*/
+     padding-bottom: 5%; 
+}

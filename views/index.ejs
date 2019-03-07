@@ -1,0 +1,32 @@
+ <% include ./partials/header%>
+ 
+<div id ="cont" class="ui  text container ">
+    <div><h1 class="ui header"> Welcome to my Blog!</h1></div>
+    <div  id="cont2" class="ui divided items raised black tall stacked segment">
+    
+     <% blogs.forEach(function(blog){%>
+  <div class="item">
+    <div class="image">
+        <img src="<%=blog.image%>">
+    </div>
+    <div class="content">
+      <a href="/blogs/<%=blog._id%>" class="header"><%= blog["title"] %></a>
+      <div class="meta">
+        <span class="cinema"><%= blog.created.toDateString() %></span>
+      </div>
+      <div class="description">
+        <p><%= blog.body.substring(0,100) %> ...</p>
+      </div>
+        <div class="extra">
+            <a href="/blogs/<%=blog._id%>" class="ui right floated labeled button" > Read More
+                
+                <i class="right arrow icon"></i>
+                
+            </a>
+      </div>
+    </div>
+  </div>
+   <% });%>
+ </div>
+ 
+ <% include ./partials/footer%>

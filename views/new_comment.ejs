@@ -1,0 +1,29 @@
+<%include ./partials/header%>
+
+<!--text gives centre align, segment gives the outer box, ui shoukd be added as syntax, container -->
+<div class="ui text main container black raised segment">
+    
+<form class="ui form" action="/blogs/<%=blog._id%>/comments" method="post">
+ 
+       
+        <h1>Add new comment to </h1>
+        <div class="field">
+          
+             <label>Author</label>
+            <input type="text" name="comment[author]" placeholder="author" required>
+        </div>
+       
+        <div class="field">
+        
+            <label >Comment</label>
+           <textarea name="comment[text]" required></textarea>
+          </div>
+        <button class="ui black button">Submit</button>
+    
+</form>
+</div>
+
+<% include ./partials/footer%>
+
+
+

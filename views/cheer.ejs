@@ -1,0 +1,91 @@
+<%include ./partials/header%>
+
+
+
+<div class="ui text main container black raised segment" style='text-align:center'>
+    <p style='font-size:100%;'>Here's something to brighten up your day!</p>
+    <p style='font-size:100%'>PS: Refresh the page for more!</p>
+    
+    
+    
+<img src='' style='max-height:100%;max-width:100%'>
+</div>
+
+ <script>
+ //DOG PIC RANDOM API WITH ASYNC AWAIT
+       
+        let text=document.querySelector('h3');
+      let img=document.querySelector('img');
+      let author=document.querySelector('#author')
+          const myAsyncFn= async function () {
+            //   let url='https://images.dog.ceo/breeds/mix/Masala.jpg'
+                let url='https://dog.ceo/api/breeds/image/random'
+                let quote=await fetch(url);
+        //   let quote= await fetch('http://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1');
+          let response=await quote.json();
+          
+          if(!response.ok){
+              console.log(response.status)
+                     }
+       
+          return response;
+          
+}
+              myAsyncFn().then(res => {img.src=res.message}).catch(error => {alert(error)})
+      
+       
+  //RANDOM DOG PIC API WITH XHR     
+//       let btn = document.querySelector("#btn");
+// let img = document.querySelector("img");
+
+
+// btn.addEventListener("click", function(){
+
+//   let XHR = new XMLHttpRequest();
+  
+//   XHR.onreadystatechange = function(){
+//     if(XHR.readyState == 4 && XHR.status == 200) {
+//       let url = JSON.parse(XHR.responseText).message;
+//       img.src = url;
+//     }
+//   }
+  
+//   XHR.open("GET","https://dog.ceo/api/breeds/image/random");
+//   XHR.send();
+// })
+   
+   
+
+//QUOTES API
+//         let text=document.querySelector('h3');
+      
+//       let author=document.querySelector('#author')
+//           const myAsyncFn= async function () {
+//                 let url='https://crossorigin.me/http://quotes.rest/qod.json'
+//                 let quote=await fetch(url);
+//         //   let quote= await fetch('http://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1');
+         
+//               if(quote.status==200){
+//             let response=await quote.json();
+//           return response;   
+//           }
+//           else
+//           {
+//                 console.log('error with response')
+//           }
+//           console.log(response)
+         
+          
+// }
+//               myAsyncFn().then(resolve => {
+//                   text.textContent= resolve.contents.quotes[0].quote;
+//           author.textContent=resolve.contents.quotes[0].author;})
+//               .catch(error => {alert(error)})
+ 
+        
+        
+        
+        
+   </script>
+
+<%include ./partials/footer%>

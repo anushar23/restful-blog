@@ -1,0 +1,79 @@
+<%include ./partials/header%>
+
+<!--text gives centre align, segment gives the outer box, ui shoukd be added as syntax, container -->
+<div class="ui text main container black raised segment">
+    
+<form class="ui form" action="/blogs" method="post">
+ 
+       
+        <!--<div class="ui huge header"> New Blog</div>-->
+        <h1>New Blog</h1>
+        <div class="field">
+          
+             <label >Title</label>
+            <input type="text" name="blog[title]" placeholder="Title" required>
+        </div>
+        <div class="field">
+           
+            <label >Image</label>
+            <input type="text" name="blog[image]" placeholder="Image">
+        </div>
+        <div class="field">
+            <!--style="text-align:left"-->
+            <label >Blog Content</label>
+           <textarea name="blog[body]" required></textarea>
+          </div>
+        <button class="ui black button">Submit</button>
+    
+</form>
+</div>
+
+<!--</div>-->
+
+<!--<div class="ui error message">-->
+<!--  <i class="close icon"></i>-->
+<!--  <div class="header">-->
+<!--    There were some errors with your submission-->
+<!--  </div>-->
+<!--  <ul class="list">-->
+<!--    <li>You must enter a title for your blog.</li>-->
+<!--    <li>You need to enter content for your blog.</li>-->
+<!--  </ul>-->
+<!--</div>-->
+
+<% include ./partials/footer%>
+
+<!--<div class="ui middle aligned center aligned grid">-->
+<!--  <div class="column">-->
+   
+    
+<!--      <div class="content">-->
+<!--        Log-in to your account-->
+<!--      </div>-->
+<!--    </h2>-->
+<!--    <form class="ui large form">-->
+<!--      <div class="ui stacked segment">-->
+<!--        <div class="field">-->
+<!--          <div class="ui left icon input">-->
+            
+<!--            <input type="text" name="email" placeholder="E-mail address">-->
+<!--          </div>-->
+<!--        </div>-->
+<!--        <div class="field">-->
+<!--          <div class="ui left icon input">-->
+       
+<!--            <input type="password" name="password" placeholder="Password">-->
+<!--          </div>-->
+<!--        </div>-->
+<!--        <div class="ui fluid large teal submit button">Login</div>-->
+<!--      </div>-->
+
+<!--      <div class="ui error message"></div>-->
+
+<!--    </form>-->
+
+<!--    <div class="ui message">-->
+<!--      New to us? <a href="#">Sign Up</a>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
